@@ -1,6 +1,8 @@
-#include "./FreeRTOS.h"
-#include "task.h"
-
+#include "FreeRTOS.h"
+#include "tasks.h"
+#include "FreeRTOSConfig.h"
+#include <stdio.h>
+#include <stddef.h> 
 void Task1(void *pvParameters) {
     while (1) {
         printf("Task 1 is running\n");

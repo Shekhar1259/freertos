@@ -37,4 +37,8 @@
 #define configCHECK_FOR_STACK_OVERFLOW   2
 #define configUSE_MALLOC_FAILED_HOOK     1
 
+/* Macro to convert milliseconds to ticks */
+#define pdMS_TO_TICKS(xTimeInMs) ((TickType_t)(((TickType_t)(xTimeInMs)) / portTICK_PERIOD_MS))
+
 #endif /* FREERTOS_CONFIG_H */
+#define portTICK_PERIOD_MS ((TickType_t)1000 / configTICK_RATE_HZ)
